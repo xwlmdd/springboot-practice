@@ -7,4 +7,6 @@ import com.mdd.domain.User;
  */
 public interface UserDao {
     User getUserDaoById(int id);
+
+    int saveUserInfo(User user);
 }

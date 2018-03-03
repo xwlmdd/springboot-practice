@@ -8,4 +8,6 @@ import com.mdd.domain.User;
 public interface UserService {
 
     User getUserInfoById(int id);
+
+    int saveUserInfo(User user);
 }

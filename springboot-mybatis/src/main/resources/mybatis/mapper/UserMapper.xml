@@ -17,4 +17,19 @@
 		SELECT * FROM t_user where id = #{id}
 	</select>
 
+	<insert id="saveUserInfo" parameterType="com.mdd.domain.User">
+		INSERT INTO
+			t_user (user_name,password,email,phone,qq,weixin,type,create_time)
+		VALUES
+			(#{userName},#{password},#{email},#{phone},#{qq},#{weixin},#{type},now())
+		on duplicate key update
+			user_name = #{userName},
+			email = #{email},
+			phone = #{phone},
+			qq = #{qq},
+			weixin = #{weixin},
+			type = #{type}
+	</insert>
+
+
 </mapper>

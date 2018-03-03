@@ -1,8 +1,6 @@
 package com.mdd.domain;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.util.Date;
 
@@ -10,6 +8,7 @@ import java.util.Date;
  * Created by mdd on 2018/3/1.
  */
 @Data
+@Builder
 @NoArgsConstructor
 @AllArgsConstructor
 public class User {

@@ -75,7 +75,7 @@ public class DruidDBConfig {
     public DataSource dataSource(){    
         DruidDataSource datasource = new DruidDataSource();
             
-        datasource.setUrl(this.dbUrl);    
+        datasource.setUrl(this.dbUrl);
         datasource.setUsername(username);    
         datasource.setPassword(password);    
         datasource.setDriverClassName(driverClassName);    
@@ -93,11 +93,11 @@ public class DruidDBConfig {
         datasource.setTestOnReturn(testOnReturn);    
         datasource.setPoolPreparedStatements(poolPreparedStatements);    
         datasource.setMaxPoolPreparedStatementPerConnectionSize(maxPoolPreparedStatementPerConnectionSize);    
-        try {    
-            datasource.setFilters(filters);    
-        } catch (SQLException e) {    
-            logger.error("druid configuration initialization filter", e);    
-        }    
+//        try {
+//            datasource.setFilters(filters);
+//        } catch (SQLException e) {
+//            logger.error("druid configuration initialization filter", e);
+//        }
         datasource.setConnectionProperties(connectionProperties);    
             
         return datasource;    

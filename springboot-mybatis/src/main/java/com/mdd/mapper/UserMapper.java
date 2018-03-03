@@ -9,4 +9,6 @@ import org.apache.ibatis.annotations.Param;
 public interface UserMapper {
 
     User getUserInfoById(@Param("id")int id);
+
+    int saveUserInfo(User user);
 }
